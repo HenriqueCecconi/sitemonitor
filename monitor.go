@@ -17,7 +17,7 @@ func main() {
 	case 0:
 		fmt.Println("Exiting the program")
 	case 1:
-		starMonitoring()
+		startMonitoring()
 	case 2:
 		fmt.Println("Exhibiting logs...")
 	default:
@@ -45,7 +45,7 @@ func readInput() int {
 	return inputRecieved
 }
 
-func starMonitoring() {
+func startMonitoring() {
 	fmt.Println("Monitoring...")
 	// This site give me a random status code every time I access it
 	site := "https://random-status-code.herokuapp.com/"
