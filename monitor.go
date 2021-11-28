@@ -15,16 +15,16 @@ func main() {
 
 	var command int
 	fmt.Scan(&command)
-	//fmt.Scanf("%d", &command)
 	fmt.Println("The chosen command is:", command)
 
-	if command == 0 {
+	switch command {
+	case 0:
 		fmt.Println("Exiting the program")
-	} else if command == 1 {
+	case 1:
 		fmt.Println("Monitoring...")
-	} else if command == 2 {
+	case 2:
 		fmt.Println("Exhibiting logs...")
-	} else {
+	default:
 		fmt.Println("I don't know this command")
 	}
 }
