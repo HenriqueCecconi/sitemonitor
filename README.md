@@ -7,7 +7,7 @@
   </p>
 </div>
 
-# About The Project
+## About The Project
 
 This simple Command Line Application checks if the specified sites are online and can be accessed.
 
