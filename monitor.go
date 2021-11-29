@@ -3,25 +3,29 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"os"
 )
 
 func main() {
 
 	showIntroduction()
 
-	showMenu()
+	for {
+		showMenu()
 
-	command := readInput()
+		command := readInput()
 
-	switch command {
-	case 0:
-		fmt.Println("Exiting the program")
-	case 1:
-		startMonitoring()
-	case 2:
-		fmt.Println("Exhibiting logs...")
-	default:
-		fmt.Println("I don't know this command")
+		switch command {
+		case 0:
+			fmt.Println("Exiting the program")
+			os.Exit(0)
+		case 1:
+			startMonitoring()
+		case 2:
+			fmt.Println("Exhibiting logs...")
+		default:
+			fmt.Println("I don't know this command")
+		}
 	}
 }
 
