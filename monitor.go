@@ -76,7 +76,12 @@ func startMonitoring() {
 }
 
 func testConnection(sites string) {
-	resp, _ := http.Get(sites)
+	resp, err := http.Get(sites)
+
+	if err != nil {
+		fmt.Println("An error occurred:", err)
+	}
+
 	if resp.StatusCode == 200 {
 		fmt.Println("The site", sites, "was successfully accessed!")
 	} else {
