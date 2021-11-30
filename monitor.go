@@ -7,6 +7,9 @@ import (
 	"time"
 )
 
+const repetitions = 3
+const delay = 5
+
 func main() {
 
 	showIntroduction()
@@ -61,12 +64,14 @@ func startMonitoring() {
 	// This first site give me a random status code every time I access it
 	monitoredSites := []string{"https://random-status-code.herokuapp.com/", "https://google.com", "https://github.com"}
 
-	for i := 0; i < 5; i++ {
+	for i := 0; i < repetitions; i++ {
 		for _, sites := range monitoredSites {
 			fmt.Println("Testing the site:", sites)
 			testConnection(sites)
 		}
-		time.Sleep(10 * time.Second)
+		// This is set to Seconds because it's just a demonstration, made to be quick
+		time.Sleep(delay * time.Second)
+		fmt.Println()
 	}
 }
 
