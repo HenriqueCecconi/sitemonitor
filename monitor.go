@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+	"time"
 )
 
 func main() {
@@ -60,9 +61,12 @@ func startMonitoring() {
 	// This first site give me a random status code every time I access it
 	monitoredSites := []string{"https://random-status-code.herokuapp.com/", "https://google.com", "https://github.com"}
 
-	for _, sites := range monitoredSites {
-		fmt.Println("Testing the site:", sites)
-		testConnection(sites)
+	for i := 0; i < 5; i++ {
+		for _, sites := range monitoredSites {
+			fmt.Println("Testing the site:", sites)
+			testConnection(sites)
+		}
+		time.Sleep(10 * time.Second)
 	}
 }
 
