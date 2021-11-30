@@ -57,17 +57,14 @@ func readInput() int {
 func startMonitoring() {
 	fmt.Println("Monitoring...")
 	// This first site give me a random status code every time I access it
-	sites := []string{"https://random-status-code.herokuapp.com/", "https://google.com", "https://github.com"}
+	monitoredSites := []string{"https://random-status-code.herokuapp.com/", "https://google.com", "https://github.com"}
 
-	fmt.Println(sites)
-
-	for i := 0; i < len(sites); i++ {
-		resp, _ := http.Get(sites[i])
+	for _, sites := range monitoredSites {
+		resp, _ := http.Get(sites)
 		if resp.StatusCode == 200 {
-			fmt.Println("The sites", sites, "was successfully accessed!")
+			fmt.Println("The site", sites, "was successfully accessed!")
 		} else {
 			fmt.Println("Couldn't access", sites, "smoothly. Status Code:", resp.StatusCode)
 		}
-		fmt.Println()
 	}
 }
