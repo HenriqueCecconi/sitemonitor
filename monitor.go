@@ -1,9 +1,12 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
+	"io"
 	"net/http"
 	"os"
+	"strings"
 	"time"
 )
 
@@ -61,8 +64,8 @@ func readInput() int {
 func startMonitoring() {
 	fmt.Println("Monitoring...")
 	fmt.Println()
-	// This first site give me a random status code every time I access it
-	monitoredSites := []string{"https://random-status-code.herokuapp.com/", "https://google.com", "https://github.com"}
+
+	monitoredSites := readSitesList()
 
 	for i := 0; i < repetitions; i++ {
 		for _, sites := range monitoredSites {
@@ -88,4 +91,29 @@ func testConnection(sites string) {
 		fmt.Println("Couldn't access", sites, "smoothly. Status Code:", resp.StatusCode)
 	}
 	fmt.Println()
+}
+
+func readSitesList() []string {
+	var sites []string
+	arquivo, err := os.Open("sites.txt")
+
+	if err != nil {
+		fmt.Println("An error occurred:", err)
+	}
+
+	reader := bufio.NewReader(arquivo)
+
+	for {
+		line, err := reader.ReadString('\n')
+		line = strings.TrimSpace(line)
+		sites = append(sites, line)
+
+		if err == io.EOF {
+			break
+		}
+	}
+
+	fmt.Println("Testing the following sites:", sites)
+
+	return sites
 }
