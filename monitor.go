@@ -6,6 +6,7 @@ import (
 	"io"
 	"net/http"
 	"os"
+	"strconv"
 	"strings"
 	"time"
 )
@@ -87,8 +88,10 @@ func testConnection(sites string) {
 
 	if resp.StatusCode == 200 {
 		fmt.Println("The site", sites, "was successfully accessed!")
+		registerLog(sites, true)
 	} else {
 		fmt.Println("Couldn't access", sites, "smoothly. Status Code:", resp.StatusCode)
+		registerLog(sites, false)
 	}
 	fmt.Println()
 }
@@ -117,4 +120,16 @@ func readSitesList() []string {
 	file.Close()
 
 	return sites
+}
+
+func registerLog(site string, status bool) {
+	arquivo, err := os.OpenFile("log.txt", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
+
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	arquivo.WriteString(site + "- online:" + strconv.FormatBool(status) + "\n")
+
+	arquivo.Close()
 }

@@ -1,0 +1,15 @@
+https://random-status-code.herokuapp.com/- online:false
+https://google.com/- online:true
+https://github.com/- online:true
+https://alura.com.br/- online:true
+https://caelum.com.br/- online:true
+https://random-status-code.herokuapp.com/- online:false
+https://google.com/- online:true
+https://github.com/- online:true
+https://alura.com.br/- online:true
+https://caelum.com.br/- online:true
+https://random-status-code.herokuapp.com/- online:false
+https://google.com/- online:true
+https://github.com/- online:true
+https://alura.com.br/- online:true
+https://caelum.com.br/- online:true
