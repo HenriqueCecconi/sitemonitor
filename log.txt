@@ -1,15 +1,30 @@
-https://random-status-code.herokuapp.com/- online:false
-https://google.com/- online:true
-https://github.com/- online:true
-https://alura.com.br/- online:true
-https://caelum.com.br/- online:true
-https://random-status-code.herokuapp.com/- online:false
-https://google.com/- online:true
-https://github.com/- online:true
-https://alura.com.br/- online:true
-https://caelum.com.br/- online:true
-https://random-status-code.herokuapp.com/- online:false
-https://google.com/- online:true
-https://github.com/- online:true
-https://alura.com.br/- online:true
-https://caelum.com.br/- online:true
+01/12/2021 20:19:36 - https://random-status-code.herokuapp.com/ - online:false
+01/12/2021 20:19:36 - https://google.com/ - online:true
+01/12/2021 20:19:36 - https://github.com/ - online:true
+01/12/2021 20:19:37 - https://alura.com.br/ - online:true
+01/12/2021 20:19:38 - https://caelum.com.br/ - online:true
+01/12/2021 20:19:43 - https://random-status-code.herokuapp.com/ - online:true
+01/12/2021 20:19:44 - https://google.com/ - online:true
+01/12/2021 20:19:44 - https://github.com/ - online:true
+01/12/2021 20:19:44 - https://alura.com.br/ - online:true
+01/12/2021 20:19:44 - https://caelum.com.br/ - online:true
+01/12/2021 20:19:50 - https://random-status-code.herokuapp.com/ - online:false
+01/12/2021 20:19:50 - https://google.com/ - online:true
+01/12/2021 20:19:50 - https://github.com/ - online:true
+01/12/2021 20:19:50 - https://alura.com.br/ - online:true
+01/12/2021 20:19:51 - https://caelum.com.br/ - online:true
+01/12/2021 20:20:19 - https://random-status-code.herokuapp.com/ - online:false
+01/12/2021 20:20:19 - https://google.com/ - online:true
+01/12/2021 20:20:19 - https://github.com/ - online:true
+01/12/2021 20:20:20 - https://alura.com.br/ - online:true
+01/12/2021 20:20:20 - https://caelum.com.br/ - online:true
+01/12/2021 20:20:26 - https://random-status-code.herokuapp.com/ - online:false
+01/12/2021 20:20:26 - https://google.com/ - online:true
+01/12/2021 20:20:26 - https://github.com/ - online:true
+01/12/2021 20:20:33 - https://alura.com.br/ - online:true
+01/12/2021 20:20:33 - https://caelum.com.br/ - online:true
+01/12/2021 20:20:39 - https://random-status-code.herokuapp.com/ - online:false
+01/12/2021 20:20:39 - https://google.com/ - online:true
+01/12/2021 20:20:39 - https://github.com/ - online:true
+01/12/2021 20:20:39 - https://alura.com.br/ - online:true
+01/12/2021 20:20:40 - https://caelum.com.br/ - online:true
