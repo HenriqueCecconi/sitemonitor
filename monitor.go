@@ -95,13 +95,13 @@ func testConnection(sites string) {
 
 func readSitesList() []string {
 	var sites []string
-	arquivo, err := os.Open("sites.txt")
+	file, err := os.Open("sites.txt")
 
 	if err != nil {
 		fmt.Println("An error occurred:", err)
 	}
 
-	reader := bufio.NewReader(arquivo)
+	reader := bufio.NewReader(file)
 
 	for {
 		line, err := reader.ReadString('\n')
@@ -114,6 +114,7 @@ func readSitesList() []string {
 	}
 
 	fmt.Println("Testing the following sites:", sites)
+	file.Close()
 
 	return sites
 }
